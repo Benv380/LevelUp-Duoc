@@ -1,0 +1,24 @@
+.productos-principal{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 3rem;
+}
+header{
+    font-family: 'Orbitron', sans-serif;
+    background-color: black;
+    margin-top: 2rem;
+}
+
+.productos-principal {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.productos-principal img {
+    margin-top: 3rem;
+    margin: 10px;
+    border: 2px;
+    border-radius: 10px;
+}
