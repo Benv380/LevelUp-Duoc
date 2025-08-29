@@ -22,3 +22,15 @@ header{
     border: 2px;
     border-radius: 10px;
 }
+
+.carousel{
+    max-width: 300px;
+    margin: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.carousel img {
+    border-radius: 10px;
+}
