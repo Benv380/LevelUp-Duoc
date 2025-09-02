@@ -1,69 +1,90 @@
-.productos-principal{
-    background-color: black;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 3rem;
+.productos-principal {
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 3rem;
 }
-header{
-    font-family: 'Orbitron', sans-serif;
-    background-color: black;
-    margin-top: 2rem;
+
+header {
+  font-family: 'Orbitron', sans-serif;
+  background-color: black;
+  margin-top: 2rem;
 }
 
 .productos-principal {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: black;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: black;
 }
 
 .productos-principal img {
-    margin-top: 3rem;
-    margin: 10px;
-    border: 2px;
-    border-radius: 10px;
+  margin-top: 3rem;
+  margin: 10px;
+  border: 2px;
+  border-radius: 10px;
 }
 
-.carousel{
-    max-width: 300px;
-    margin: 50px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+.carousel {
+  max-width: 800px;
+  margin: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .carousel img {
-    border-radius: 10px;
+  border-radius: 10px;
 }
+
 .carousel-item {
-      height: 500px;
-    }
-    .carousel-item img {
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
-      border-radius: 12px;
-    }
-    .carousel-caption {
-      background: rgba(0,0,0,0.6);
-      border-radius: 10px;
-      padding: 1rem;
-      text-align: left;
-    }
-    .sidebar-game {
-      background-color: #1a1a1a;
-      border-radius: 8px;
-      transition: 0.3s;
-      display: flex;
-      align-items: center;
-      padding: 0.5rem;
-    }
-    .sidebar-game:hover, .sidebar-game.active {
-      background-color: #333;
-      cursor: pointer;
-    }
-    .sidebar-game img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
+  height: 500px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.sidebar-game {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.sidebar-game:hover,
+.sidebar-game.active {
+  background-color: #333;
+  cursor: pointer;
+}
+
+.sidebar-game img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.news img {
+  justify-content: space-around;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ccc;
+}
+
+.opinions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
