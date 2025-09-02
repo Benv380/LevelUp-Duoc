@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/Index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
@@ -60,26 +60,103 @@
             </div>
         </div>
     </nav>
-</header-p>
+    </header-p>
 
-<body class="productos-principal">
-    <div class="productos-imagenes" style="margin-top: 4rem;">
-        <img class="float-start" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc58DjgeVAiOPGiM4TP8UUBiKsHxcwE8hAnQ&s" alt="" height="300px" width="300px">
-        <img class="float-start" src="https://cms-assets.xboxservices.com/assets/60/5c/605c37d5-663e-4690-8a52-d866398f6d17.jpg?n=320089_Image-1084_Compare-Chart_Standard_800x850.jpg" alt="" height="300px" width="300px">
-        <img class="float-start" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7p97X1LSqSuKt8SRtv2Sc0mIfgudPwlvqUA&s" alt="" height="350px" width="350px">
-        <img class="float-start" src="https://i.ytimg.com/vi/4lro2eeHwRk/maxresdefault.jpg" alt="" height="350px" width="350px">
-        <img class="float-start" src="https://media.solotodo.com/media/products/1848498_picture_1701406726.jpg" alt="" height="350px" width="350px">
-        
-    </div>
-    <div>    
-        
-        
-    </div>
-    <div>
-        
-    </div>
-    
-</body>
+    <body class="productos-principal">
+        <div class="container-fluid py-4">
+            <div class="row">
+
+                <!-- Hero con carrusel -->
+                <div class="col-lg-9 mb-3">
+                    <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_617321-MLU72628864692_112023-O.webp"
+                                    class="d-block w-100" alt="Mando Xbox Series Elite">
+                                <div class="carousel-caption">
+                                    <h2 class="fw-bold"></h2>
+                                    <p></p>
+                                    <a href="#" class="btn btn-light me-2">Más información</a>
+                                    <a href="#" class="btn btn-outline-light">+ Lista de deseos</a>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <img src="https://cl-cenco-pim-resizer.ecomm.cencosud.com/unsafe/adaptive-fit-in/3840x0/filters:quality(75)/prd-cl/product-medias/MKLBDC2NIS/e53a0f9e-815c-4bf5-8687-4699ec8d2c00/1689522395828-MKLBDC2NIS-1-2.jpg"
+                                    class="d-block w-100" alt="Juego de mesa Catan">
+                                <div class="carousel-caption">
+                                    <h2 class="fw-bold">Juego de mesa Catan</h2>
+                                    <p></p>
+                                    <a href="#" class="btn btn-light me-2">Más información</a>
+                                    <a href="#" class="btn btn-outline-light">+ Lista de deseos</a>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <img src="https://media.solotodo.com/media/products/1182943_picture_1602146793.webp"
+                                    class="d-block w-100" alt="Ps5">
+                                <div class="carousel-caption">
+                                    <h2 class="fw-bold">Ps5</h2>
+                                    <p>Sumérgete en un mundo oscuro de fantasía lleno de desafíos y enemigos épicos.</p>
+                                    <a href="#" class="btn btn-light me-2">Más información</a>
+                                    <a href="#" class="btn btn-outline-light">+ Lista de deseos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controles -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="d-flex flex-column gap-3">
+                        <div class="sidebar-game active" data-bs-target="#gameCarousel" data-bs-slide-to="0">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_859205-MLA49725383266_042022-O.webp"
+                                alt="">
+                            <span class="ms-3">Fortnite</span>
+                        </div>
+                        <div class="sidebar-game" data-bs-target="#gameCarousel" data-bs-slide-to="1">
+                            <img src="https://i.ytimg.com/vi/8E4N8VjJZ1U/maxresdefault.jpg" alt="">
+                            <span class="ms-3">EA Sports FC 26</span>
+                        </div>
+                        <div class="sidebar-game" data-bs-target="#gameCarousel" data-bs-slide-to="2">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_859205-MLA49725383266_042022-O.webp" alt="">
+                            <span class="ms-3">Lords of the Fallen II</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+
+
+        </div>
+        <div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // 🔄 Actualizar sidebar activo al cambiar de slide
+            const carousel = document.getElementById('gameCarousel');
+            const sidebarItems = document.querySelectorAll('.sidebar-game');
+
+            carousel.addEventListener('slide.bs.carousel', function (event) {
+                sidebarItems.forEach(item => item.classList.remove('active'));
+                sidebarItems[event.to].classList.add('active');
+            });
+        </script>
+    </body>
 
 
 

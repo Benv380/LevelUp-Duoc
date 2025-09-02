@@ -22,3 +22,37 @@ header{
     border: 2px;
     border-radius: 10px;
 }
+
+.carousel-item {
+      height: 500px;
+    }
+    .carousel-item img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
+    }
+    .carousel-caption {
+      background: rgba(0,0,0,0.6);
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: left;
+    }
+    .sidebar-game {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+    }
+    .sidebar-game:hover, .sidebar-game.active {
+      background-color: #333;
+      cursor: pointer;
+    }
+    .sidebar-game img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
