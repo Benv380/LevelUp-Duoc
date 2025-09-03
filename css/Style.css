@@ -27,20 +27,22 @@ header {
 .carousel {
   display: flex;
   max-width: 800px;
-  margin: 50px;
+  margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
 }
 
 .carousel img {
   display: flex;
-  border-radius: 10px;
+  border-radius: 100px;
 }
 
 .carousel-item {
   display: flex;
   height: 500px;
+  width: 100%;
 }
 
 .carousel-item img {
@@ -67,12 +69,24 @@ header {
   display: flex;
   align-items: center;
   padding: 0.5rem;
+  margin-left: 0;
+}
+
+.sidebar-game.active span {
+  color: #000;
+}
+
+.sidebar-game span {
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .sidebar-game:hover,
 .sidebar-game.active {
   display: flex;
-  background-color: #000;
+  background-color: #39FF14;
   cursor: pointer;
 }
 
@@ -84,18 +98,58 @@ header {
   border-radius: 5px;
 }
 
+.news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Alinea a la izquierda */
+  gap: 2rem;
+  margin-right: 7rem;
+}
+
+.news .card {
+  width: 18rem;
+  margin: 0;
+  padding: 0;
+  max-width: 18rem;
+  background-color: #333;
+}
+
+.news span {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
 .news img {
-  justify-content: space-around;
-  display: flexbox;
-  width: 300px;
-  height: 300px;
-  border: 1px solid #ccc;
+  width: 270px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  border: none;
+  display: block;
+}
+
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+
+.events h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .opinions {
+  margin-top: 4rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-content: center;
   gap: 1rem;
+  margin-left: 20rem;
 }
 
 .button {
@@ -158,4 +212,7 @@ body {
   object-fit: cover;
 }
 
-
+.section-spacing {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}

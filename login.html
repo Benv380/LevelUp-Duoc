@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,11 @@
   <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Orbitron:wght@600&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <!-- Header -->
-  <header class="header">
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="catalogo.html">Catálogo</a>
-      <a href="login.html" class="active">Login</a>
-      <a href="register.html">Registro</a>
-      <a href="carrito.html">Carrito</a>
-    </nav>
+  <header id="header" data-btn-visible="true" data-btn-text="Registrarse" data-btn-href="./login.html">
+    <script src="./js/components/header.js"></script>
   </header>
 
   <!-- Login -->
@@ -49,11 +45,12 @@
   </main>
 
   <!-- Footer -->
-<div id="footer-placeholder"></div>
-<script src="js/footer.js"></script>
+  <div id="footer-placeholder"></div>
+  <script src="js/footer.js"></script>
 
 
   <!-- Script de login -->
   <script src="js/auth.js"></script>
 </body>
+
 </html>

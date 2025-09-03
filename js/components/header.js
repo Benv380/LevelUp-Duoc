@@ -27,7 +27,7 @@ document.getElementById("header").innerHTML = `
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         <!-- Botón dinámico -->
-        <a id="navbar-btn" class="btn btn-primary ms-3">Mi Botón</a>
+        <a id="navbar-btn" class="btn btn-primary ms-3"></a>
       </div>
     </div>
   </nav>
