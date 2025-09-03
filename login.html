@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - LevelUp</title>
+  <link rel="stylesheet" href="css/Style.css">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="login.html" class="active">Login</a>
+      <a href="register.html">Registro</a>
+      <a href="carrito.html">Carrito</a>
+    </nav>
+  </header>
+
+  <!-- Login -->
+  <main class="login-container">
+    <h1>Iniciar Sesión</h1>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@duoc.cl" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="********" required>
+      </div>
+
+      <div class="form-group-check">
+        <input type="checkbox" id="rememberMe">
+        <label for="rememberMe">Recuérdame</label>
+      </div>
+
+      <button type="submit" class="btn">Iniciar sesión</button>
+      <p class="form-text">¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+    </form>
+
+    <!-- Mensaje dinámico -->
+    <p id="loginMessage" class="message"></p>
+  </main>
+
+  <!-- Footer -->
+<div id="footer-placeholder"></div>
+<script src="js/footer.js"></script>
+
+
+  <!-- Script de login -->
+  <script src="js/auth.js"></script>
+</body>
+</html>
