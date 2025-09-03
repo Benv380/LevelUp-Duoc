@@ -9,7 +9,7 @@ function showproducts(products, productcontainer) {
 
     products.forEach((prod) => {
         productcontainer.innerHTML += `
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-4">
                 <div class="card h-100 shadow" style="background-color: #1E90FF; color: #39FF14; border-radius: 8px; font-family: 'Roboto', sans-serif;">
                     <img src="${prod.imagen || 'https://via.placeholder.com/300'}" 
                          class="card-img-top rounded-top" 
