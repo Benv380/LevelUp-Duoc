@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+
+
+
+
+<body class="h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+
+
+
+
+    <main class="row-start-2 relative h-full">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-color: black;"></div>
+        <div class="absolute inset-0 bg-black/30"></div>
+
+        <div
+            class="relative z-10 container mx-auto p-10 overflow-auto flex flex-col items-center justify-center min-h-[80vh]">
+            <h1 style="color: rgb(126, 126, 126); font-family: 'Roboto', sans-serif;" class="text-4xl mb-6 text-center">Catálogo de
+                Productos</h1>
+            <div id="products" style="color: #39FF14;" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
+            </div>
+        </div>
+    </main>
+
+    <!--Catálogo de productos traido desde JS/Utils-->
+    <script src="/js/components/showproducts.js" defer></script>
+    <script src="/js/utils/categories/categories.js" defer></script>
+
+
+</body>
+
+</html>
