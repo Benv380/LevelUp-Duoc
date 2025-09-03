@@ -74,6 +74,7 @@ let products = [
 let productcontainer = document.getElementById("products");
 
 
+
 showproducts(products, productcontainer);
 
 

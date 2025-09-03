@@ -97,3 +97,14 @@ header {
   justify-content: flex-end;
   gap: 1rem;
 }
+
+.button {
+  background-color: #39FF14;
+  font-family: 'Roboto', sans-serif;
+  color: #1E90FF;
+}
+
+.button:hover {
+  background-color: #32CD32;
+  color: gray;
+}
