@@ -2,7 +2,7 @@ document.getElementById("header").innerHTML = `
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">LevelUp</a>
+      <img src="assets/img/Logo - Level Up.png" alt="LevelUp" class="navbar-brand" style="height:100px;">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">

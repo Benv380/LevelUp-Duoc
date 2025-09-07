@@ -101,7 +101,7 @@ header {
 .news {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Alinea a la izquierda */
+  justify-content: flex-start; 
   gap: 2rem;
   margin-right: 7rem;
 }
@@ -216,3 +216,5 @@ body {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+
+
