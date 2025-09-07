@@ -6,28 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - LevelUp</title>
   <link rel="stylesheet" href="css/Style.css">
-
-  <!-- Fuentes -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Orbitron:wght@600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Header -->
-  <header id="header" data-btn-visible="true" data-btn-text="Registrarse" data-btn-href="./login.html">
-    <script src="./js/components/header.js"></script>
-  </header>
+  <header id="header" data-btn-visible="true" data-btn-text="Registrarse" data-btn-href="./login.html"></header>
 
   <!-- Login -->
   <main class="login-container">
-    <h1>Iniciar Sesión</h1>
+    <h1 class="loginTitle">Iniciar Sesión</h1>
     <form id="loginForm">
-      <div class="form-group">
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" placeholder="ejemplo@duoc.cl" required>
+      <div class="form-group-login">
+        <label for="email"></label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@duoc.cl" required style="text-align: center;">
       </div>
 
-      <div class="form-group">
-        <label for="password">Contraseña</label>
+      <div class="form-group-password">
+        <label for="password"></label>
         <input type="password" id="password" name="password" placeholder="********" required>
       </div>
 
@@ -36,8 +36,8 @@
         <label for="rememberMe">Recuérdame</label>
       </div>
 
-      <button type="submit" class="btn">Iniciar sesión</button>
-      <p class="form-text">¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+      <button type="submit" class="btn" href="/index.html">Iniciar sesión</button>
+      <p class="form-text">¿No tienes cuenta? <a href="./Index.html">Regístrate aquí</a></p>
     </form>
 
     <!-- Mensaje dinámico -->
@@ -51,6 +51,7 @@
 
   <!-- Script de login -->
   <script src="js/auth.js"></script>
+  <script src="./js/components/header.js"></script>
 </body>
 
 </html>
