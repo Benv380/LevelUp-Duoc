@@ -1,5 +1,6 @@
-document.getElementById("header").innerHTML = `
 
+const header = document.getElementById("header");
+header.innerHTML = `
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <img src="assets/img/Logo - Level Up.png" alt="LevelUp" class="navbar-brand" style="height:100px;">
@@ -33,12 +34,10 @@ document.getElementById("header").innerHTML = `
   </nav>
 `;
 
-const header = document.getElementById("header");
 const btn = document.getElementById("navbar-btn");
-
 if (header.dataset.btnVisible === "false") {
   btn.style.display = "none";
 } else {
   btn.textContent = header.dataset.btnText;
-  btn.setAttribute("href", header.dataset.btnHref); // ✅ corregido
+  btn.setAttribute("href", header.dataset.btnHref);
 }

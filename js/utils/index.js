@@ -1,7 +1,7 @@
 // index.js
 
 // Leer usuario activo desde localStorage
-const usuarioActivo = localStorage.getItem("usuarioActivo");
+const usuarioActivo = JSON.parse(localStorage.getItem("currentUser"));
 
 // Referencia al botón de la navbar
 const navbarBtn = document.getElementById("navbar-btn");
@@ -9,30 +9,25 @@ const navbarBtn = document.getElementById("navbar-btn");
 // Referencia al mensaje de bienvenida
 const welcomeText = document.getElementById("welcome");
 
-// Si hay un usuario activo
 if (usuarioActivo) {
-  // Mostrar mensaje de bienvenida
   if (welcomeText) {
-    welcomeText.textContent = "Bienvenido, " + usuarioActivo;
+    welcomeText.textContent = "Bienvenido, " + usuarioActivo.nombre;
   }
 
-  // Cambiar botón de la navbar a "Cerrar sesión"
   if (navbarBtn) {
     navbarBtn.textContent = "Cerrar sesión";
-    navbarBtn.href = "#"; // evita que navegue a otra página
+    navbarBtn.href = "#";
 
-    // Acción al clickear: cerrar sesión
     navbarBtn.addEventListener("click", () => {
-      localStorage.removeItem("usuarioActivo"); // borrar sesión
+      localStorage.removeItem("currentUser");
       alert("Has cerrado sesión 👋");
-      window.location.href = "index.html"; // recargar a home
+      window.location.href = "index.html";
     });
   }
 } else {
-  // Si no hay sesión activa → botón de Login/Registro
   if (navbarBtn) {
     navbarBtn.textContent = "Login / Registro";
-    navbarBtn.href = "auth.html";
+    navbarBtn.href = "./login.html";
   }
 
   if (welcomeText) {

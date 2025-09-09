@@ -1,105 +1,118 @@
-// =========================
-// Elementos
-// =========================
-const loginTab = document.getElementById("loginTab");
-const registerTab = document.getElementById("registerTab");
-const loginForm = document.getElementById("loginForm");
-const registerForm = document.getElementById("registerForm");
-const loginMessage = document.getElementById("loginMessage");
-const registerMessage = document.getElementById("registerMessage");
+// auth.js - Manejo de autenticación y usuarios
 
-// Botones del formulario
-const loginBtn = loginForm.querySelector("button");
-const registerBtn = registerForm.querySelector("button");
+class AuthManager {
+  constructor() {
+    this.users = JSON.parse(localStorage.getItem('users')) || [];
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
+  }
 
-// =========================
-// Función para actualizar visual del tab y botón
-// =========================
-function activateTab(tab) {
-    if(tab === "login") {
-        loginForm.style.display = "block";
-        registerForm.style.display = "none";
-        loginTab.classList.add("active");
-        registerTab.classList.remove("active");
+  validarEdad(fechaNacimiento) {
+    const hoy = new Date();
+    const nacimiento = new Date(fechaNacimiento);
+    let edad = hoy.getFullYear() - nacimiento.getFullYear();
+    const mes = hoy.getMonth() - nacimiento.getMonth();
+    if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) edad--;
+    return edad >= 18;
+  }
 
-        // Cambiar color del botón
-        loginBtn.classList.remove("btn-success");
-        loginBtn.classList.add("btn-primary");
-        loginBtn.textContent = "Iniciar sesión";
-    } else if(tab === "register") {
-        loginForm.style.display = "none";
-        registerForm.style.display = "block";
-        registerTab.classList.add("active");
-        loginTab.classList.remove("active");
+  esCorreoDuoc(correo) {
+    return correo.endsWith('@duoc.cl') || correo.endsWith('@duocuc.cl');
+  }
 
-        // Cambiar color del botón
-        registerBtn.classList.remove("btn-primary");
-        registerBtn.classList.add("btn-success");
-        registerBtn.textContent = "Registrarse";
-    }
+  validarEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  validarPassword(password) {
+    return password.length >= 6;
+  }
+
+  registrarUsuario(nombre, email, password, fechaNacimiento) {
+    if (!this.validarEmail(email)) throw new Error('Por favor ingresa un email válido');
+    if (!this.validarPassword(password)) throw new Error('La contraseña debe tener al menos 6 caracteres');
+    if (!this.validarEdad(fechaNacimiento)) throw new Error('Debes ser mayor de 18 años para registrarte');
+    if (this.users.find(user => user.email === email)) throw new Error('Este email ya está registrado');
+
+    const nuevoUsuario = {
+      id: Date.now(),
+      nombre,
+      email,
+      password,
+      fechaNacimiento,
+      esDuoc: this.esCorreoDuoc(email),
+      fechaRegistro: new Date().toISOString(),
+      puntosLevelUp: 0,
+      nivel: 1
+    };
+
+    this.users.push(nuevoUsuario);
+    localStorage.setItem('users', JSON.stringify(this.users));
+
+    return nuevoUsuario;
+  }
+
+  iniciarSesion(email, password) {
+    const usuario = this.users.find(user => user.email === email && user.password === password);
+    if (!usuario) throw new Error('Email o contraseña incorrectos');
+    this.currentUser = usuario;
+    localStorage.setItem('currentUser', JSON.stringify(usuario));
+    return usuario;
+  }
+
+  cerrarSesion() {
+    this.currentUser = null;
+    localStorage.removeItem('currentUser');
+  }
+
+  estaAutenticado() {
+    return this.currentUser !== null;
+  }
+
+  obtenerUsuarioActual() {
+    return this.currentUser;
+  }
+
+  tieneDescuentoDuoc() {
+    return this.currentUser && this.currentUser.esDuoc;
+  }
 }
 
-// =========================
-// Alternar Tabs
-// =========================
-loginTab.addEventListener("click", () => activateTab("login"));
-registerTab.addEventListener("click", () => activateTab("register"));
+const authManager = new AuthManager();
 
-// =========================
-// Registro de Usuario
-// =========================
-registerForm.addEventListener("submit", e => {
-    e.preventDefault();
+function togglePassword(inputId, iconId) {
+  const passwordInput = document.getElementById(inputId);
+  const eyeIcon = document.getElementById(iconId);
 
-    const name = document.getElementById("registerName").value.trim();
-    const email = document.getElementById("registerEmail").value.trim();
-    const password = document.getElementById("registerPassword").value.trim();
-    const dob = document.getElementById("registerDob").value;
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    eyeIcon.classList.replace('fa-eye', 'fa-eye-slash');
+  } else {
+    passwordInput.type = 'password';
+    eyeIcon.classList.replace('fa-eye-slash', 'fa-eye');
+  }
+}
 
-    // Validar edad >= 18
-    const birth = new Date(dob);
-    const today = new Date();
-    let age = today.getFullYear() - birth.getFullYear();
-    if(today.getMonth() < birth.getMonth() || (today.getMonth() === birth.getMonth() && today.getDate() < birth.getDate())) age--;
+function verificarAutenticacion() {
+  if (authManager.estaAutenticado()) {
+    window.location.href = 'index.html';
+  }
+}
 
-    if(age < 18){
-        registerMessage.textContent = "Debes tener al menos 18 años.";
-        registerMessage.style.color = "red";
-        return;
-    }
+function requerirAutenticacion() {
+  if (!authManager.estaAutenticado()) {
+    window.location.href = 'login.html';
+  }
+}
 
-    // Guardar usuario en localStorage
-    const user = {name, email, password, dob};
-    localStorage.setItem("user", JSON.stringify(user));
-
-    registerMessage.textContent = "✅ Registro exitoso. Ahora inicia sesión.";
-    registerMessage.style.color = "green";
-
-    // Cambiar automáticamente a login
-    setTimeout(() => activateTab("login"), 1500);
-});
-
-// =========================
-// Inicio de Sesión
-// =========================
-loginForm.addEventListener("submit", e => {
-    e.preventDefault();
-
-    const email = document.getElementById("loginEmail").value.trim();
-    const password = document.getElementById("loginPassword").value.trim();
-
-    const savedUser = JSON.parse(localStorage.getItem("user"));
-
-    if(savedUser && savedUser.email === email && savedUser.password === password){
-        loginMessage.textContent = "✅ Bienvenido " + savedUser.name;
-        loginMessage.style.color = "green";
-
-        localStorage.setItem("isLoggedIn", "true");
-        localStorage.setItem("usuarioActivo", savedUser.name);
-
-        setTimeout(() => window.location.href = "index.html", 1500);
-    } else {
-        loginMessage.textContent = "❌ Correo o contraseña incorrectos.";
-        loginMessage.style.color = "red";
-    }
-});
+function mostrarMensaje(elementId, mensaje, esError = true) {
+  const element = document.getElementById(elementId);
+  element.textContent = mensaje;
+  element.style.display = 'block';
+  element.className = esError ? 'mensaje-error' : 'mensaje-exito';
+  if (!esError) {
+    setTimeout(() => {
+      element.style.display = 'none';
+    }, 3000);
+  }
+}
