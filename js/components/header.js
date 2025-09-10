@@ -27,6 +27,7 @@ var header1 = `
         </form>
         <!-- Botón dinámico -->
         <a id="navbar-btn" class="btn btn-primary ms-3"></a>
+        <a href="./carrito.html"><img src="Assets/img/carrito-de-compras-512x512.png" alt="" style="width: 50px; height: 50px;"></a>
       </div>
     </div>
   </nav>
