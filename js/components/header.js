@@ -1,6 +1,4 @@
-
-const header = document.getElementById("header");
-header.innerHTML = `
+var header1 = `
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <img src="assets/img/Logo - Level Up.png" alt="LevelUp" class="navbar-brand" style="height:100px;">
@@ -25,7 +23,7 @@ header.innerHTML = `
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
         <!-- Botón dinámico -->
         <a id="navbar-btn" class="btn btn-primary ms-3"></a>
@@ -34,6 +32,7 @@ header.innerHTML = `
   </nav>
 `;
 
+document.getElementById("header").innerHTML = header1;
 const btn = document.getElementById("navbar-btn");
 if (header.dataset.btnVisible === "false") {
   btn.style.display = "none";
