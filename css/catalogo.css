@@ -1,0 +1,162 @@
+
+
+.productos-principal {
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 3rem;
+}
+
+header {
+  font-family: 'Orbitron', sans-serif;
+  background-color: black;
+  margin-top: 2rem;
+}
+
+.productos-principal {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.productos-principal img {
+  margin-top: 3rem;
+  margin: 10px;
+  border: 2px;
+  border-radius: 10px;
+}
+
+
+.button:hover {
+  background-color: #32CD32;
+  color: gray;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.2s ease;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+}
+
+.card-title {
+  font-weight: 700;
+  color: #333;
+}
+
+.card-text {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.btn-cotizar {
+  background-color: #1E90FF;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-cotizar:hover {
+  background-color: #0d6efd;
+  color: #000;
+}
+
+.card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.section-spacing {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+footer {
+    width: 100%;               
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    text-align: center;        
+    display: flex;             
+    flex-direction: column;    
+    align-items: center;       
+    justify-content: center;   
+    padding: 20px 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background-color: #000000; /* negro puro */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; /* texto blanco por defecto */
+}
+
+/* auth.css - Estilos para páginas de autenticación */
+:root {
+    --color-fondo: #000000;
+    --color-texto: #FFFFFF;
+    --color-texto-secundario: #D3D3D3;
+    --color-acento-azul: #1E90FF;
+    --color-acento-verde: #39FF14;
+    --color-error: #FF4757;
+    --color-exito: #2ED573;
+}
+
+.auth-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 1 rem auto;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-acento-azul), var(--color-acento-verde));
+    color: var(--color-fondo);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(57, 255, 20, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.order-title{
+  margin-left: 50rem;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 3rem;
+}
+

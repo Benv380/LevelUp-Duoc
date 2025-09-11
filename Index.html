@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -18,16 +17,15 @@
         crossorigin="anonymous"></script>
 </head>
 
-
-<body class="productos-principal">
+<body class="productos-principal" style="background-color: black;">
 
     <header id="header" data-btn-visible="true" data-btn-text="Registrarse" data-btn-href="./register.html">
     <script src="./js/components/header.js"></script>
     </header>
 
-
     <div class="container-fluid py-4">
-        <div class="row">
+        <div class="row">  
+    
 
             <!-- Hero con carrusel -->
             <div class="col-lg-8 mb-3">
@@ -95,32 +93,33 @@
             <div class="col-lg-3">
                 <div class="d-flex flex-column gap-3">
                     <div class="sidebar-game active" data-bs-target="#gameCarousel" data-bs-slide-to="0">
-                        <img src="assets/img/Controlador xbox.jpeg" alt="">
+                        <img src="assets/img/Controlador xbox.jpeg" alt="Controlador Xbox">
                         <span class="ms-3">Xbox</span>
                     </div>
                     <div class="sidebar-game" data-bs-target="#gameCarousel" data-bs-slide-to="1">
                         <img src="assets/img/Catan.jpeg"
-                            alt="">
+                            alt="Catan">
                         <span class="ms-3">Catan</span>
                     </div>
                     <div class="sidebar-game" data-bs-target="#gameCarousel" data-bs-slide-to="2">
-                        <img src="assets/img/Playstation5.jpeg" alt="">
+                        <img src="assets/img/Playstation5.jpeg" alt="Playstation 5">
                         <span class="ms-3">Ps5</span>
                     </div>
-                    <div class="sidebar-game active" data-bs-target="#gameCarousel" data-bs-slide-to="3">
-                        <img src="assets/img/Carcasonne.jpeg" alt="">
+                    <div class="sidebar-game" data-bs-target="#gameCarousel" data-bs-slide-to="3">
+                        <img src="assets/img/Carcasonne.jpeg" alt="Carcassonne">
                         <span class="ms-3">Carcassonne</span>
                     </div>
-                    <div class="sidebar-game active" data-bs-target="#gameCarousel" data-bs-slide-to="4">
-                        <img src="assets/img/Mouse gamer.jpeg" alt="">
+                    <div class="sidebar-game" data-bs-target="#gameCarousel" data-bs-slide-to="4">
+                        <img src="assets/img/Mouse gamer.jpeg" alt="Mouse Gamer">
                         <span class="ms-3">Mouse</span>
                     </div>
                 </div>
             </div>
 
         </div>
-    <div class="news">
-    <h2 class="w-100 text-center mb-4" style="color: #39FF14;">Descubre lo nuevo</h2>
+
+        <div class="news">
+        <h2 class="w-100 text-center mb-4" style="color: #39FF14;">Descubre lo nuevo</h2>
 
         <!-- Noticia 1 -->
         <div class="card" style="width: 18rem;">
@@ -170,7 +169,7 @@
             <h5 class="card-title">Gaming Fest Santiago</h5>
             <p class="card-text">Un festival gamer en Movistar Arena con torneos y stands tecnológicos.</p>
         </div>
-        </div>
+    </div>
 
         <div class="card" style="width: 18rem;">
         <img src="assets/img/Evento2.png" class="card-img-top" alt="Evento 2">
@@ -226,11 +225,9 @@
 </div>
 
 
-    
-
     <div id="opinionsCarousel" class="carousel slide opinions w-100" data-bs-ride="carousel" data-bs-interval="3000">
-  <h2 class="text-center mb-4" style="color: #39FF14;">Opiniones de Nuestros Gamers</h2>
-  <div class="carousel-inner">
+    <h2 class="text-center mb-4" style="color: #39FF14;">Opiniones de Nuestros Gamers</h2>
+    <div class="carousel-inner">
 
     <!-- Opinión 1 -->
     <div class="carousel-item active">
@@ -268,25 +265,22 @@
     </div>
     </div>
 
-</div>
-
-<!-- Controles -->
-<button class="carousel-control-prev" type="button" data-bs-target="#opinionsCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-    <span class="visually-hidden">Anterior</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#opinionsCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-    <span class="visually-hidden">Siguiente</span>
-</button>
-</div>
-
-
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#opinionsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#opinionsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+        </div>
 
     </div>
     <script src="/js/components/header.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+
         //Actualizar sidebar activo al cambiar de slide
         const carousel = document.getElementById('gameCarousel');
         const sidebarItems = document.querySelectorAll('.sidebar-game');
@@ -297,11 +291,12 @@
         });
     </script>
 
-    <footer id="footer"></footer>
-    <script src="./js/components/footer.js" defer></script>
     <script src="./js/utils/index.js"></script>
+    <script src="./js/components/footer.js" defer></script>
+    
 
+    <footer id="footer"></footer>
+    
 </body>
-
 
 </html>

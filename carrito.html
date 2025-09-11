@@ -2,36 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./js/components/cart.js">
-</head>
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Level-Up</title>
+  <link rel="stylesheet" href="./css/carrito.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
 
 <body style="background-color: black;">
 
-    <header id="header" data-btn-visible="true" data-btn-text="Registrarse" data-btn-href="./register.html">
-        <script src="./js/components/header.js"></script>
-    </header>
+  <header id="header" data-btn-visible="true" data-btn-text="Registrarse" data-btn-href="./register.html">
+    <script src="./js/components/header.js"></script>
+  </header>
 
-    <h1 class="order-title">Tu Carrito</h1>
+  <main class="container my-5 text-center">
+  <h1 class="order-title">TU CARRITO</h1>
 
-    <div class="card border-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Header</div>
-        <div class="card-body text-primary">
-            <h5 class="card-title">Primary card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                content.</p>
-        </div>
-        <button>asd</button>
+  <!-- Aquí se insertarán los productos -->
+  <div id="cart-items" class="d-flex flex-column align-items-center"></div>
+
+  <!-- Aquí se mostrará el total -->
+  <h4 id="cart-total" class="text-white mt-3">Total: $0</h4>
+
+  <button id="checkout-btn" class="btn btn-success mt-3">Comprar</button>
+</main>
+
+
+  <script src="./js/components/cart.js" defer></script>
+  <script src="./js/utils/index.js" defer></script>
 
 </body>
-
 </html>
