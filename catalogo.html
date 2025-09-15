@@ -6,22 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo - Level-Up</title>
-    <link rel="stylesheet" href="./css/catalogo.css">
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/catalogo.css">
+    <link rel="stylesheet" href="./css/Style.css">
 
 </head>
 
-<body class="display-flex" id="product-card" style="background-color: black; ">
+<body class="display-flex">
 
     <header id="header" data-btn-visible="true" data-btn-text="Registrarse" data-btn-href="./register.html">
     <script src="./js/components/header.js"></script>
     </header>
 
+    <main>
     <div id="products" class="row"
         style=" margin-left: 10rem; margin-right: 10rem; display: flex; margin-top: 3%; margin-bottom: 3%;">  
     </div>
+    </main>
 
     <!--Catálogo de productos traido desde JS/Utils-->
     <script src="/js/components/showproducts.js" defer></script>

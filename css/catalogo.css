@@ -1,22 +1,11 @@
 
 
 .productos-principal {
-  background-color: black;
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 3rem;
-}
-
-header {
-  font-family: 'Orbitron', sans-serif;
-  background-color: black;
-  margin-top: 2rem;
-}
-
-.productos-principal {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: black;
+  background-color: transparent; /* evita doble fondo */
+  padding: 2rem;
 }
 
 .productos-principal img {
@@ -33,15 +22,16 @@ header {
 }
 
 .card {
+  background-color: #1a1a1a;   /* oscuro como en index */
+  color: #fff;
+  border: none;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-  transition: transform 0.2s ease;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 1rem;
+  max-width: 280px; /* más controlado que 1200px */
+  padding: 0;       /* quita el relleno interno extra */
 }
-
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
@@ -49,23 +39,33 @@ header {
 
 .card-title {
   font-weight: 700;
-  color: #333;
+  color: var(--color-acento-verde); 
 }
 
 .card-text {
-  color: #555;
+  color: #ccc; 
   font-size: 0.9rem;
 }
 
-.btn-cotizar {
-  background-color: #1E90FF;
-  color: white;
-  font-weight: 600;
+.btn-cotizar,
+.card button,
+.card a {
+  background-color: transparent;
+  border: 1px solid var(--color-acento-verde);
+  color: var(--color-acento-verde);
+  font-weight: bold;
   border-radius: 8px;
+  padding: 8px 12px;
+  margin-top: 1rem;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-.btn-cotizar:hover {
-  background-color: #0d6efd;
+.btn-cotizar:hover,
+.card button:hover,
+.card a:hover {
+  background-color: var(--color-acento-verde);
   color: #000;
 }
 
@@ -81,29 +81,6 @@ header {
   margin-bottom: 2rem;
 }
 
-footer {
-    width: 100%;               
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-    text-align: center;        
-    display: flex;             
-    flex-direction: column;    
-    align-items: center;       
-    justify-content: center;   
-    padding: 20px 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-
-body {
-    background-color: #000000; /* negro puro */
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff; /* texto blanco por defecto */
-}
-
-/* auth.css - Estilos para páginas de autenticación */
 :root {
     --color-fondo: #000000;
     --color-texto: #FFFFFF;
@@ -154,9 +131,8 @@ body {
     transform: translateY(0);
 }
 
-.order-title{
+.order-title {
   margin-left: 50rem;
   font-family: 'Roboto', sans-serif;
   margin-top: 3rem;
 }
-

@@ -1,18 +1,4 @@
 
-body {
-    background-color: #000000; /* negro puro */
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-}
-
-header {
-  font-family: 'Orbitron', sans-serif;
-  background-color: black;
-  margin-top: 2rem;
-}
-
-
 .order-title {
     text-align: center;
     font-family: 'Orbitron', sans-serif;
