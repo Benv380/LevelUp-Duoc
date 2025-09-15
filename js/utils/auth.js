@@ -116,3 +116,23 @@ function mostrarMensaje(elementId, mensaje, esError = true) {
     }, 3000);
   }
 }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        try {
+          authManager.iniciarSesion(email, password);
+          mostrarMensaje("mensaje", "¡Inicio de sesión exitoso! Redirigiendo...", false);
+
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1000);
+        } catch (error) {
+          mostrarMensaje("mensaje", error.message);
+        }
+      });
+    });

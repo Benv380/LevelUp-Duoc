@@ -77,46 +77,12 @@
 
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("email").addEventListener("input", function () {
-        const emailHelp = document.getElementById("emailHelp");
-        if (authManager.esCorreoDuoc(this.value)) {
-          emailHelp.style.display = "block";
-        } else {
-          emailHelp.style.display = "none";
-        }
-      });
 
-      document.getElementById("registerForm").addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const nombre = document.getElementById("nombre").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const confirmPassword = document.getElementById("confirmPassword").value;
-        const fechaNacimiento = document.getElementById("fechaNacimiento").value;
-
-        if (password !== confirmPassword) {
-          mostrarMensaje("mensaje", "Las contraseñas no coinciden");
-          return;
-        }
-
-        try {
-          authManager.registrarUsuario(nombre, email, password, fechaNacimiento);
-          mostrarMensaje("mensaje", "¡Cuenta creada exitosamente! Redirigiendo a Login...", false);
-
-          setTimeout(() => {
-            window.location.href = "login.html";
-          }, 1000);
-        } catch (error) {
-          mostrarMensaje("mensaje", error.message);
-        }
-      });
-    });
   </script>
 
   <script src="./js/utils/auth.js" defer></script>
   <script src="./js/utils/login.js" defer></script>
+  <script src="./js/utils/register.js" defer></script>
 
 </body>
 

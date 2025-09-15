@@ -53,25 +53,7 @@
   </main>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("loginForm").addEventListener("submit", function (e) {
-        e.preventDefault();
 
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-
-        try {
-          authManager.iniciarSesion(email, password);
-          mostrarMensaje("mensaje", "¡Inicio de sesión exitoso! Redirigiendo...", false);
-
-          setTimeout(() => {
-            window.location.href = "index.html";
-          }, 1000);
-        } catch (error) {
-          mostrarMensaje("mensaje", error.message);
-        }
-      });
-    });
   </script>
 
   <script src="./js/utils/auth.js" defer></script>
